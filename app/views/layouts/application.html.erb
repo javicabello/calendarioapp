@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calendar</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<header> 
+  <h1><%= link_to "Calendar", root_path %></h1>
+  <ul class="nav-bar">
+	<li class="nav-bar-left"><%= link_to "Import Calendar", root_path %></li> 
+	<li class="nav-bar-left"><%= link_to "Create Calendar", root_path %></li> 
+	<li class="nav-bar-left"><%= link_to "Invite Friends", root_path %></li>
+	<li class="nav-bar-left"><%= link_to "My Profile", root_path %></li>
+  </ul>
+</header>
+
+<%= yield %>
+
+</body>
+</html>
